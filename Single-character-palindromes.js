@@ -16,3 +16,18 @@ For example:
 
 
 // Solution
+
+function solve(s) {
+  if (s === s.split('').reverse().join('')) {
+    return 'OK'
+  }
+  for (let i=0;i<s.length;i++) {
+    let strArr = s.split('')
+    strArr.splice(i, 1)
+
+    if (strArr.join('') === strArr.reverse().join('')) {
+      return "remove one"
+    }
+  }
+  return 'not possible'
+};
