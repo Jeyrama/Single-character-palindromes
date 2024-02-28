@@ -13,3 +13,6 @@ For example:
   solve("abbaa") = "remove one". -- remove the 'a' at the extreme right. 
   solve("abbaab") = "not possible". 
 */
+
+
+// Solution
