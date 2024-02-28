@@ -31,3 +31,5 @@ function solve(s) {
   }
   return 'not possible'
 };
+
+// or
