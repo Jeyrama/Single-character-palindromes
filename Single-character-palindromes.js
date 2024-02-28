@@ -33,3 +33,22 @@ function solve(s) {
 };
 
 // or
+
+const solve = (str) => {
+  if (isPalindrome(str)) {
+    return 'OK';
+  }
+  return [...str].some((_, i) => {
+    const modified = str.slice(0, i) + str.slice(++i);
+    return isPalindrome(modified);
+  }) ? 'remove one' : 'not possible';
+};
+
+const isPalindrome = (str, len = str.length) => {
+  for (let i = 0; i < len / 2; i++) {
+    if (str[i] !== str[len - 1 - i]) {
+      return false;
+    }
+  }
+  return true;
+};
